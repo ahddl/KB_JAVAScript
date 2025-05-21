@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03_background</title>
+    <style>
+      div {
+        /* border: 1px solid lightgrey;
+        height: 2pxs; */
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        // let divs = "";
+        // const $body = document.body;
+
+        // for (let i = 0; i < 256; i++) {
+        //   divs += "<div></div>";
+        // }
+        // $body.innerHTML = divs;
+
+        // const div = document.querySelectorAll("div");
+        // div.forEach((el, i) => {
+        //   el.style.background = `rgb(${i}, ${i}, ${i})`;
+        //   el.style.height = "2px";
+        // });
+
+        const fragment = document.createDocumentFragment();
+        // console.log(fragment);
+
+        for (let i = 0; i < 255; i++) {
+          const div = document.createElement("div");
+          div.style.height = "2px";
+          div.style.background = `rgb(${i},${i},${i})`;
+          fragment.appendChild(div); //리스트 상에 가장 뒷쪽에 넣는것
+        }
+        document.body.appendChild(fragment);
+      };
+    </script>
+  </head>
+  <body>
+    <h1>03_background</h1>
+  </body>
+</html>
